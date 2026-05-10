@@ -41,7 +41,7 @@
 </div>
 
 <div class="mt-5 bg-gradient-to-t from-black via-gray-900 to-black opacity-80">
-    @include('_partials.terminal-title', ['text' => 'darknet.org_rss', 'icon' => 'rss'])
+    @include('_partials.terminal-title', ['text' => 'isocpp.org_rss', 'icon' => 'rss'])
     <div class="text-white pl-1" id="rss-feed">Loading... Or is it?</div>
 </div>
 </div>

@@ -28,7 +28,7 @@ function parseRSSFeed(feedXML) {
 }
 
 async function displayRSSFeed() {
-    const url = "https://1pro71t329.execute-api.us-east-1.amazonaws.com/darknet/rss"
+    const url = "https://isocpp.org/blog/rss"
     const rssData = await fetchRSSFeed(url);
 
     if (rssData) {

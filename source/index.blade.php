@@ -90,7 +90,7 @@
 
             </x-terminal-window>
 
-            <x-terminal-window title="darknet.org -rss" icon="rss">
+            <x-terminal-window title="isocpp.org -rss" icon="rss">
                 <div class="text-xs p-4 text-verde rounded-md pl-1" id="rss-feed">Loading... Or is it?</div>
             </x-terminal-window>
         </div>
