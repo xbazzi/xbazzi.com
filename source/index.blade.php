@@ -1,30 +1,8 @@
 @extends('_layouts.main')
 
 @section('body')
-    <!-- <div class="flex gap-4">
-<div>
-
-    <div class="bg-indigo-500 size-24 border border-black"></div>
-    <div class="bg-indigo-500 size-24 border border-black"></div>
-    <div class="bg-indigo-500 size-24 border border-black"></div>
-    <div class="bg-indigo-500 size-24 border border-black"></div>
-</div>
-<div>
-
-    <div class="bg-indigo-500 size-24 border border-black"></div>
-    <div class="bg-indigo-500 size-24 border border-black"></div>
-    <div class="bg-indigo-500 size-24 border border-black"></div>
-    <div class="bg-indigo-500 size-24 border border-black"></div>
-</div>
-<div class="grid grid-cols-5 grid-rows-4 flex-1">
-    <div class="bg-white col-span-1 row-start-1 row-end-1 col-start-2  border-black"></div>
-    <div class="bg-white col-span-5 row-start-2 row-end-2 border  border-black"></div>
-    <div class="bg-white col-span-1 row-start-3 row-end-3 col-start-2  border-black"></div>
-</div>
-</div> -->
-
-    <div class="grid gap-4 grid-cols-12 max-w-5xl mx-auto">
-        <div class="col-span-8 flex flex-col gap-8">
+    <div class="grid gap-4 grid-cols-1 lg:grid-cols-12 max-w-5xl mx-auto">
+        <div class="col-span-full lg:col-span-8 flex flex-col gap-8">
             <x-info-window title="whoami" class="p-4" icon="user">
             <div class="prose prose-stone text-black">
                 <p>
@@ -43,7 +21,7 @@
 
             {{-- Projects section --}}
             <x-info-window title="projects" class="p-4" icon="lightbulb">
-                <div class="grid grid-cols-4 gap-4">
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                     @foreach ($projects as $p)
                         @include('_partials.card', [
                             'title' => $p->title,
@@ -56,7 +34,7 @@
 
             {{-- Blog section --}}
             <x-info-window title="blog" class="p-4" icon="blog">
-                <div class="grid grid-cols-4 gap-4">
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                     @foreach ($blog as $p)
                         @include('_partials.card', [
                             'title' => $p->title,
@@ -67,14 +45,13 @@
                 </div>
             </x-info-window>
         </div>
-        <div class="col-span-4 flex flex-col gap-8">
+        <div class="col-span-full lg:col-span-4 flex flex-col gap-8">
             <x-terminal-window title="links" icon="link">
                 {{-- ['text' => 'Home', 'newtab' => false, 'icon_type' => 'solid', 'icon' => 'home', 'link' => ''], --}}
                 @php
                     $links = [
-                        ['text' => 'GitHub', 'icon_type' => 'brands', 'icon' => 'github', 'link' => 'https://github.com/xbazzi'],
-                        ['text' => 'LinkedIn', 'icon_type' => 'brands', 'icon' => 'linkedin', 'link' => 'https://linkedin.com/in/alexbazzi'],
-                        ['text' => 'Gitea', 'icon_type' => 'brands', 'icon' => 'git-alt', 'link' => 'https://gitgud.foo/xbazzi'],
+                        ['text' => 'linkedin', 'icon_type' => 'brands', 'icon' => 'linkedin', 'link' => 'https://linkedin.com/in/alexbazzi'],
+                        ['text' => 'gitgud.boo', 'icon_type' => 'brands', 'icon' => 'git-alt', 'link' => 'https://gitgud.boo/xbazzi'],
                     ];
                 @endphp
                 <div class="text-verde p-3">
@@ -97,8 +74,4 @@
     </div>
 
     {{-- Footer --}}
-    <!-- <div class="flex w-full h-auto">
-        <img src="/assets/img/gifs/green_lights.gif" alt="lightspeed">
-        <img src="/assets/img/gifs/green_lights.gif" alt="lightspeed">
-    </div> -->
 @endsection

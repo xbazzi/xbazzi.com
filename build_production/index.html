@@ -9,7 +9,7 @@
     <script src="//unpkg.com/alpinejs" defer></script>
     <title>xBazzi</title>
     <script src="https://kit.fontawesome.com/6faa1ef8ce.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/assets/build/css/main.css?id=89148e352c3aec7752825a62f384c2af">
+    <link rel="stylesheet" href="/assets/build/css/main.css?id=fc6e273f4d22a9d9d9f4d009dca8c9ce">
     <script defer src="/assets/build/js/main.js?id=c428fb49b78a1a37ad67d9e5deed7caf"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/night-owl.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
@@ -20,36 +20,14 @@
     <script>hljs.highlightAll();</script>
 </head>
 
-<body class="text-gray-900 py-10 antialiased">
+<body class="text-gray-900 py-4 sm:py-10 antialiased">
     <div class="flex w-full h-auto items-center justify-center">
         <a href="/">
             <img class="mx-auto mb-4" src="/assets/img/xbazzi_logo2.png" alt="">
         </a>
     </div>
-        <!-- <div class="flex gap-4">
-<div>
-
-    <div class="bg-indigo-500 size-24 border border-black"></div>
-    <div class="bg-indigo-500 size-24 border border-black"></div>
-    <div class="bg-indigo-500 size-24 border border-black"></div>
-    <div class="bg-indigo-500 size-24 border border-black"></div>
-</div>
-<div>
-
-    <div class="bg-indigo-500 size-24 border border-black"></div>
-    <div class="bg-indigo-500 size-24 border border-black"></div>
-    <div class="bg-indigo-500 size-24 border border-black"></div>
-    <div class="bg-indigo-500 size-24 border border-black"></div>
-</div>
-<div class="grid grid-cols-5 grid-rows-4 flex-1">
-    <div class="bg-white col-span-1 row-start-1 row-end-1 col-start-2  border-black"></div>
-    <div class="bg-white col-span-5 row-start-2 row-end-2 border  border-black"></div>
-    <div class="bg-white col-span-1 row-start-3 row-end-3 col-start-2  border-black"></div>
-</div>
-</div> -->
-
-    <div class="grid gap-4 grid-cols-12 max-w-5xl mx-auto">
-        <div class="col-span-8 flex flex-col gap-8">
+        <div class="grid gap-4 grid-cols-1 lg:grid-cols-12 max-w-5xl mx-auto">
+        <div class="col-span-full lg:col-span-8 flex flex-col gap-8">
             <div 
     x-data="{
         open: true, 
@@ -58,7 +36,7 @@
         close() {this.open = false}}" 
     x-show="open" 
     :class="maximized ? 'fixed top-0 left-0 !bg-gray-300 w-full h-full transition-all' : ''"
-    class="rounded-br-md  rounded-bl-md mx-auto bg-gray-300/80">
+    class="rounded-br-md rounded-bl-md mx-auto w-full bg-gray-300/80">
     <div
         class="flex border-1 border-black justify-between items-center 
                py-1 px-1  title text-lg bg-gradient-to-tr 
@@ -112,7 +90,7 @@
         close() {this.open = false}}" 
     x-show="open" 
     :class="maximized ? 'fixed top-0 left-0 !bg-gray-300 w-full h-full transition-all' : ''"
-    class="rounded-br-md  rounded-bl-md mx-auto bg-gray-300/80">
+    class="rounded-br-md rounded-bl-md mx-auto w-full bg-gray-300/80">
     <div
         class="flex border-1 border-black justify-between items-center 
                py-1 px-1  title text-lg bg-gradient-to-tr 
@@ -141,39 +119,42 @@
         </div>
     </div>
     <div x-show="!minimized" x-transition.duration.250ms class="p-4" title="projects" icon="lightbulb">
-        <div class="grid grid-cols-4 gap-4">
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                                             <a href="/projects/datacenter/index.html"
     style="background-image: url('/assets/img/infra_new.JPG'); background-size: cover; background-position: center center;"
-    class="block 
-        w-40 h-56 transition-all border border-black/60 rounded-md rounded-xs 
-        hover:shadow-lg hover:border-verde 
-        relative group
+    class="block
+        w-full h-48 lg:h-56 transition-all border border-black/60 rounded-md rounded-xs
+        hover:shadow-lg hover:border-verde
+        relative group overflow-hidden
 ">
-    <div class="w-full h-full bg-black/0 transition-all rounded-md group-hover: bg-black/60 absolute top-0 left-0"></div>
+    <div class="w-full h-full bg-black/0 transition-all rounded-md group-hover:bg-black/60 absolute top-0 left-0"></div>
+    <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-black/70 to-transparent rounded-b-md"></div>
     <!-- <img src="/assets/img/infra_new.JPG" alt="Foo bar" class="w-full rounded-md h-auto"> -->
-    <p class="text-center break-words p-2 absolute bottom-1 left-1 z-10 transition transform ease-in-out text-white group-hover:text-center group-hover:-translate-y-32"> We Have Datacenter at Home</p>
+    <p class="text-xs sm:text-sm text-center break-words p-2 absolute bottom-1 left-1 right-1 z-10 line-clamp-2 transition transform ease-in-out text-white group-hover:text-center group-hover:-translate-y-32"> We Have Datacenter at Home</p>
 </a>
                                             <a href="/projects/fiah/index.html"
     style="background-image: url('/assets/img/running-man.jpg'); background-size: cover; background-position: center center;"
-    class="block 
-        w-40 h-56 transition-all border border-black/60 rounded-md rounded-xs 
-        hover:shadow-lg hover:border-verde 
-        relative group
+    class="block
+        w-full h-48 lg:h-56 transition-all border border-black/60 rounded-md rounded-xs
+        hover:shadow-lg hover:border-verde
+        relative group overflow-hidden
 ">
-    <div class="w-full h-full bg-black/0 transition-all rounded-md group-hover: bg-black/60 absolute top-0 left-0"></div>
+    <div class="w-full h-full bg-black/0 transition-all rounded-md group-hover:bg-black/60 absolute top-0 left-0"></div>
+    <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-black/70 to-transparent rounded-b-md"></div>
     <!-- <img src="/assets/img/running-man.jpg" alt="Foo bar" class="w-full rounded-md h-auto"> -->
-    <p class="text-center break-words p-2 absolute bottom-1 left-1 z-10 transition transform ease-in-out text-white group-hover:text-center group-hover:-translate-y-32"> Fast In A Hurry</p>
+    <p class="text-xs sm:text-sm text-center break-words p-2 absolute bottom-1 left-1 right-1 z-10 line-clamp-2 transition transform ease-in-out text-white group-hover:text-center group-hover:-translate-y-32"> Fast In A Hurry</p>
 </a>
                                             <a href="/projects/website/index.html"
     style="background-image: url('/assets/img/website.png'); background-size: cover; background-position: center center;"
-    class="block 
-        w-40 h-56 transition-all border border-black/60 rounded-md rounded-xs 
-        hover:shadow-lg hover:border-verde 
-        relative group
+    class="block
+        w-full h-48 lg:h-56 transition-all border border-black/60 rounded-md rounded-xs
+        hover:shadow-lg hover:border-verde
+        relative group overflow-hidden
 ">
-    <div class="w-full h-full bg-black/0 transition-all rounded-md group-hover: bg-black/60 absolute top-0 left-0"></div>
+    <div class="w-full h-full bg-black/0 transition-all rounded-md group-hover:bg-black/60 absolute top-0 left-0"></div>
+    <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-black/70 to-transparent rounded-b-md"></div>
     <!-- <img src="/assets/img/website.png" alt="Foo bar" class="w-full rounded-md h-auto"> -->
-    <p class="text-center break-words p-2 absolute bottom-1 left-1 z-10 transition transform ease-in-out text-white group-hover:text-center group-hover:-translate-y-32"> Overengineered Static Site</p>
+    <p class="text-xs sm:text-sm text-center break-words p-2 absolute bottom-1 left-1 right-1 z-10 line-clamp-2 transition transform ease-in-out text-white group-hover:text-center group-hover:-translate-y-32"> Overengineered Static Site</p>
 </a>
                                     </div>
     </div>
@@ -188,7 +169,7 @@
         close() {this.open = false}}" 
     x-show="open" 
     :class="maximized ? 'fixed top-0 left-0 !bg-gray-300 w-full h-full transition-all' : ''"
-    class="rounded-br-md  rounded-bl-md mx-auto bg-gray-300/80">
+    class="rounded-br-md rounded-bl-md mx-auto w-full bg-gray-300/80">
     <div
         class="flex border-1 border-black justify-between items-center 
                py-1 px-1  title text-lg bg-gradient-to-tr 
@@ -217,23 +198,24 @@
         </div>
     </div>
     <div x-show="!minimized" x-transition.duration.250ms class="p-4" title="blog" icon="blog">
-        <div class="grid grid-cols-4 gap-4">
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                                             <a href="/blog/rvo/index.html"
     style="background-image: url('/assets/img/rvo.png'); background-size: cover; background-position: center center;"
-    class="block 
-        w-40 h-56 transition-all border border-black/60 rounded-md rounded-xs 
-        hover:shadow-lg hover:border-verde 
-        relative group
+    class="block
+        w-full h-48 lg:h-56 transition-all border border-black/60 rounded-md rounded-xs
+        hover:shadow-lg hover:border-verde
+        relative group overflow-hidden
 ">
-    <div class="w-full h-full bg-black/0 transition-all rounded-md group-hover: bg-black/60 absolute top-0 left-0"></div>
+    <div class="w-full h-full bg-black/0 transition-all rounded-md group-hover:bg-black/60 absolute top-0 left-0"></div>
+    <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-black/70 to-transparent rounded-b-md"></div>
     <!-- <img src="/assets/img/rvo.png" alt="Foo bar" class="w-full rounded-md h-auto"> -->
-    <p class="text-center break-words p-2 absolute bottom-1 left-1 z-10 transition transform ease-in-out text-white group-hover:text-center group-hover:-translate-y-32"> Do you even RVO?</p>
+    <p class="text-xs sm:text-sm text-center break-words p-2 absolute bottom-1 left-1 right-1 z-10 line-clamp-2 transition transform ease-in-out text-white group-hover:text-center group-hover:-translate-y-32"> Do you even RVO?</p>
 </a>
                                     </div>
     </div>
 </div>
         </div>
-        <div class="col-span-4 flex flex-col gap-8">
+        <div class="col-span-full lg:col-span-4 flex flex-col gap-8">
             <div class="rounded-br-md rounded-bl-md  shadow-md shadow-purple-800">
     <div
         class="border-4 border-black justify-between items-center py-1 px-1 text-xl text-white 
@@ -252,28 +234,20 @@
                 bg-gradient-to-b from-black/90 via-black/90 to-black/90">
         <div class="text-verde p-3">
                     <div class="flex flex-col gap-2 ">
-                                                    <a href="https://github.com/xbazzi" class="block grid gap-4 grid-cols-12"  target="_blank" >
-    <div class="flex items-center justify-center col-span-1">
-        <span class="text-verde fa-md fa-brands fa-github"></span>
-    </div>
-    <div class="text-verde flex items-center col-span-11">
-        <p>GitHub</p>
-    </div>
-</a>
                                                     <a href="https://linkedin.com/in/alexbazzi" class="block grid gap-4 grid-cols-12"  target="_blank" >
     <div class="flex items-center justify-center col-span-1">
         <span class="text-verde fa-md fa-brands fa-linkedin"></span>
     </div>
     <div class="text-verde flex items-center col-span-11">
-        <p>LinkedIn</p>
+        <p>linkedin</p>
     </div>
 </a>
-                                                    <a href="https://gitgud.foo/xbazzi" class="block grid gap-4 grid-cols-12"  target="_blank" >
+                                                    <a href="https://gitgud.boo/xbazzi" class="block grid gap-4 grid-cols-12"  target="_blank" >
     <div class="flex items-center justify-center col-span-1">
         <span class="text-verde fa-md fa-brands fa-git-alt"></span>
     </div>
     <div class="text-verde flex items-center col-span-11">
-        <p>Gitea</p>
+        <p>gitgud.boo</p>
     </div>
 </a>
                                                 <a target='_blank' class="block" rel='noreferrer noopener' href='mailto:xander@xbazzi.com'>
@@ -307,10 +281,6 @@
     </div>
 
     
-    <!-- <div class="flex w-full h-auto">
-        <img src="/assets/img/gifs/green_lights.gif" alt="lightspeed">
-        <img src="/assets/img/gifs/green_lights.gif" alt="lightspeed">
-    </div> -->
     <!-- Cloudflare Web Analytics -->
     <script defer src='https://static.cloudflareinsights.com/beacon.min.js'
         data-cf-beacon='{"token": "851787a3fc454e6e83a8ad922bcfe266"}'></script><!-- End Cloudflare Web Analytics -->

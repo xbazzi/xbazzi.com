@@ -20,7 +20,7 @@
     <script>hljs.highlightAll();</script>
 </head>
 
-<body class="text-gray-900 py-10 antialiased">
+<body class="text-gray-900 py-4 sm:py-10 antialiased">
     <div class="flex w-full h-auto items-center justify-center">
         <a href="/">
             <img class="mx-auto mb-4" src="/assets/img/xbazzi_logo2.png" alt="">

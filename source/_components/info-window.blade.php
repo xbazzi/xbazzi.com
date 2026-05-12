@@ -6,7 +6,7 @@
         close() {this.open = false}}" 
     x-show="open" 
     :class="maximized ? 'fixed top-0 left-0 !bg-gray-300 w-full h-full transition-all' : ''"
-    class="rounded-br-md  rounded-bl-md mx-auto bg-gray-300/80">
+    class="rounded-br-md rounded-bl-md mx-auto w-full bg-gray-300/80">
     <div
         class="flex border-1 border-black justify-between items-center 
                py-1 px-1  title text-lg bg-gradient-to-tr 
