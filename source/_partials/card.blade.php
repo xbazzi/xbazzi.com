@@ -14,7 +14,7 @@
         relative group overflow-hidden
 ">
     <div class="w-full h-full bg-black/0 transition-all rounded-md group-hover:bg-black/60 absolute top-0 left-0"></div>
-    <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-black/70 to-transparent rounded-b-md"></div>
+    <div class="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black/70 to-transparent rounded-b-md"></div>
     <!-- <img src="{{ $image }}" alt="{{ $image_alt }}" class="w-full rounded-md h-auto"> -->
-    <p class="text-xs sm:text-sm text-center break-words p-2 absolute bottom-1 left-1 right-1 z-10 line-clamp-2 transition transform ease-in-out text-white group-hover:text-center group-hover:-translate-y-32"> {{ $title }}</p>
+    <p class="text-xs sm:text-sm text-center break-words p-2 absolute bottom-1 left-1 right-1 z-10 line-clamp-3 transition transform ease-in-out text-white [text-shadow:-1px_-1px_0_black,1px_-1px_0_black,-1px_1px_0_black,1px_1px_0_black] group-hover:text-center group-hover:-translate-y-32"> {{ $title }}</p>
 </a>
