@@ -59,7 +59,7 @@
                         @foreach ($links as $link)
                             @include('_partials.link', $link)
                         @endforeach
-                        <a target='_blank' class="block" rel='noreferrer noopener' href='mailto:xander@xbazzi.com'>
+                        <a id="email-link" target='_blank' class="block" rel='noreferrer noopener' href='#'>
                             <img class="h-auto" src="/assets/img/gifs/email_keyboard.gif">
                         </a>
                     </div>

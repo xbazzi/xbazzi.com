@@ -89,8 +89,16 @@ function initImageEnlargement() {
     });
 }
 
+function initEmailLink() {
+    const el = document.getElementById('email-link');
+    if (!el) return;
+    const parts = ['xander', 'xbazzi.com'];
+    el.href = 'mailto:' + parts.join('@');
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     console.log("Loading RSS feed")
     displayRSSFeed()
     initImageEnlargement()
+    initEmailLink()
 });
