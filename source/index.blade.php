@@ -6,8 +6,8 @@
             <x-info-window title="whoami" class="p-4" icon="user">
             <div class="prose prose-stone text-black">
                 <p>
-                    High performance software engineer, mostly using cpp with a data-oriented approach.
-                    Currently focusing on low-latency and cache-friendly programming.
+                    High performance software engineer, specializing in C++ with a data-oriented approach.
+                    Currently focusing on low-latency and real-time programming.
                 </p>
                 <p>
                     I have spent more hours configuring DevOps and infrastructure than I'm willing
